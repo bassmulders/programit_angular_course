@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
     <h1>Example of two-way binding:</h1>
     <input [(ngModel)]="title">
     <my-student>Loading student...</my-student>
+    <router-outlet></router-outlet>
     `
 })
 export class AppComponent  {  
