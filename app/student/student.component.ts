@@ -1,5 +1,5 @@
 // When creating a new component, always first import Component:
-import { Component }      from '@angular/core';
+import { Component, OnInit }      from '@angular/core';
 
 import { Student }        from './student';
 import { StudentService } from './student.service';
@@ -12,17 +12,18 @@ import { StudentService } from './student.service';
   styleUrls:    [ 'app/student/student.component.css' ],
   providers:    [ StudentService ]
 })
-export class StudentComponent {
-  student1: Student = new Student;
+export class StudentComponent implements OnInit {
+  student1: Student;
   student2: Student;
   students: Student[] = [];
 
   constructor(private studentService: StudentService) {
-    this.student1.firstName = "Jan";
-    this.student1.lastName = "Jansen";
-    this.student2 = new Student;
-    this.student2.firstName = "Bilbo";
-    this.student2.lastName = "Baggins";
+    this.student1 = this.studentService.getStudent(1);
+    this.student2 = this.studentService.getStudent(2);
+  }
+
+  ngOnInit() {
+    this.studentService.getStudentById(1).subscribe(s => this.student1 = s)
   }
 
   fillStudents() {
