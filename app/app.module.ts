@@ -5,10 +5,11 @@ import { FormsModule }   from '@angular/forms'; // Needed a.o. for two-way bindi
 import './rxjs-extensions';
 
 import { AppComponent }  from './app.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ], // Add FormsModule here in order to use it.
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, StudentComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { 

@@ -1,1 +1,14 @@
 <h1>Student</h1>
+<div>
+  Hello {{ student1.firstName }} {{ student1.lastName }}
+</div>
+<div *ngIf="student2 != undefined">
+  Hello {{ student2.firstName }} {{ student2.lastName }}
+</div>
+<button (click)="fillStudents()">List students</button>
+<div *ngIf="students">
+  <ul>
+    <li *ngFor="let s of students">{{ s.firstName }} {{ s.lastName }}</li>
+  </ul>
+</div>
+<button (click)="clearStudents()">Remove last student from list</button>

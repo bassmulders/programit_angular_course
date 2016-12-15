@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     <input [value]="title" (change)="changeTitle($event)"/><br>
     <h1>Example of two-way binding:</h1>
     <input [(ngModel)]="title">
+    <my-student>Loading student...</my-student>
     `
 })
 export class AppComponent  {  
