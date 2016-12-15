@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "typescript.check.tscVersion": false,
+
+  // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+
+  // Exclude files from explorer
+  "files.exclude": {
+    "node_modules/": true,
+    "app/**/*.js": true,
+    "app/**/*.js.map": true,
+    "e2e/**/*.js": true,
+    "e2e/**/*.js.map": true
+  }
+
+}
