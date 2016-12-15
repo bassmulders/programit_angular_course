@@ -14,4 +14,6 @@
     "e2e/**/*.js.map": true
   }
 
+,
+"typescript.check.workspaceVersion": false
 }
